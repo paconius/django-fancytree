@@ -65,7 +65,7 @@ class FancyTreeWidget(Widget):
         if not isinstance(value, (list, tuple)):
             value = [value]
         has_id = attrs and 'id' in attrs
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         if has_id:
             output = [u'<div id="%s"></div>' % attrs['id']]
             id_attr = u' id="%s_checkboxes"' % (attrs['id'])
