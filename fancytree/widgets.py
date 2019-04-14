@@ -9,7 +9,8 @@ except:
     from django.utils.encoding import force_text
 from django.utils.html import conditional_escape
 from django.utils.safestring import mark_safe
-from django.utils.datastructures import MultiValueDict, MergeDict
+from django.utils.datastructures import MultiValueDict
+from collections import ChainMap as MergeDict
 from mptt.templatetags.mptt_tags import cache_tree_children
 
 try:
